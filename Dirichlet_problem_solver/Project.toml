@@ -1,0 +1,10 @@
+name = "Dirichlet_problem_solver"
+uuid = "a083f043-0439-4f71-9ab5-b811eac29798"
+version = "0.1.0"
+authors = ["a.molostova <s02230193@gse.cs.msu.ru>"]
+
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+
+[compat]
+LinearAlgebra = "1.12.0"
