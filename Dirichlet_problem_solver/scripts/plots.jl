@@ -18,7 +18,7 @@ function main()
     a = u_exact(0.0)
     b = u_exact(1.0)
 
-    n_steps_list = [10, 20, 50, 100, 200, 500, 1000, 5000, 10000, 100000]
+    n_steps_list = [10, 16, 20, 50, 100, 200, 500, 1000, 5000, 10000, 100000]
     errors_С = []
     errors_L2 = []
 
@@ -29,11 +29,11 @@ function main()
         u_ex = u_exact.(x)
 
         err_C = maximum(abs.(u_num - u_ex))
-        err_L2 = norm(u_num - u_ex)
+        err_L2 = sqrt(sum((1.0 / n_step) * (abs.(u_num - u_ex)).^2))
         push!(errors_С, err_C)
         push!(errors_L2, err_L2)
 
-        if (n_step == 500)
+        if (n_step == 16)
             p1 = plot(x, [u_num, u_ex],
                 label=["Численное решение" "Аналитическое решение"],
                 xlabel="x", ylabel="u(x)",
@@ -47,8 +47,11 @@ function main()
         end
     end
 
-    p2 = plot(n_steps_list, [errors_С, errors_L2],
-        label=["Ошибка в C-норме" "Ошибка в L2-норме"],
+    h = [1/n for n in n_steps_list]
+    h² = [(1/n)^2 for n in n_steps_list]
+
+    p2 = plot(n_steps_list, [errors_С, errors_L2, h, h²],
+        label=["Ошибка в C-норме" "Ошибка в L2-норме" "h" "h²"],
         xscale=:log10, yscale=:log10,
         xlabel="Количество шагов", ylabel="Ошибка",
         title="Зависимость ошибок от числа узлов сетки",

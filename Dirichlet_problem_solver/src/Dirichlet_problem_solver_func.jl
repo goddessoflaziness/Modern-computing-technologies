@@ -49,7 +49,7 @@ function Generate_rhs(func::Function, n_steps)
     h = 1 / n_steps
     x = [i * h for i = 0:(n_steps)]
     h = h^2
-    return x, [func(x[i]) * h for i = 1:(n_steps - 1)]
+    return x, [func(x[i + 1]) * h for i = 1:(n_steps - 1)]
 end
 
 """
