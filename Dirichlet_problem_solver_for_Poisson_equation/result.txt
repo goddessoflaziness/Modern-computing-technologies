@@ -1,0 +1,49 @@
+
+Size of matrix: 8
+Number of iterations: 3
+Preconditioner Time: 0.000514984
+Iterations time: 0.000255108
+L2-norm error: 0.00574677
+C-norm error: 0.0133081
+Size of matrix: 16
+Number of iterations: 5
+Preconditioner Time: 0.00405312
+Iterations time: 0.00173998
+L2-norm error: 0.00142878
+C-norm error: 0.00336087
+Size of matrix: 32
+Number of iterations: 7
+Preconditioner Time: 0.0176792
+Iterations time: 0.011585
+L2-norm error: 0.000356655
+C-norm error: 0.000841113
+Size of matrix: 64
+Number of iterations: 11
+Preconditioner Time: 0.0812109
+Iterations time: 0.063134
+L2-norm error: 8.91293e-05
+C-norm error: 0.000210697
+Size of matrix: 128
+Number of iterations: 18
+Preconditioner Time: 0.351171
+Iterations time: 0.429876
+L2-norm error: 2.22802e-05
+C-norm error: 5.26713e-05
+Size of matrix: 256
+Number of iterations: 41
+Preconditioner Time: 1.47379
+Iterations time: 4.02336
+L2-norm error: 5.56991e-06
+C-norm error: 1.31694e-05
+Size of matrix: 512
+Number of iterations: 73
+Preconditioner Time: 6.07402
+Iterations time: 29.0917
+L2-norm error: 1.39238e-06
+C-norm error: 3.29231e-06
+Size of matrix: 1024
+Number of iterations: 130
+Preconditioner Time: 24.9311
+Iterations time: 207.611
+L2-norm error: 3.42611e-07
+C-norm error: 8.11275e-07
