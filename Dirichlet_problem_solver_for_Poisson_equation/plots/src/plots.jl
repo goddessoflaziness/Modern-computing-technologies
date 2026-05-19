@@ -52,14 +52,14 @@ function main()
     df_csv[!, :total_time] = df_csv.prec_time + df_csv.iter_time
 
     # График стравнения ошибок
-    plot1 = plot(df_csv.iterations, df_csv.l2_error,
+    plot1 = plot(df_csv.size, df_csv.l2_error,
                 xscale = :log10, yscale = :log10,
                 label = "L2‑норма ошибки",
                 marker = :circle, linewidth = 2,
-                xlabel = "Число итераций", ylabel = "Ошибка",
-                title = "Зависимость ошибки от числа итераций",
+                xlabel = "Размер матрицы", ylabel = "Ошибка",
+                title = "Зависимость ошибки от размера матрицы",
                 legend = :topright)
-    plot!(df_csv.iterations, df_csv.c_error,
+    plot!(df_csv.size, df_csv.c_error,
         label = "C‑норма ошибки",
         marker = :circle, linewidth = 2)
 
